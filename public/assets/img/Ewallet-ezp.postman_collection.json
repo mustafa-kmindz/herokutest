@@ -1,0 +1,326 @@
+{
+	"info": {
+		"_postman_id": "f13c69e7-5616-4aa4-8f87-2f67152b9141",
+		"name": "Ewallet-ezp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "createEWallet",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"wallet_id\": \"wallet1\",\n    \"type\": \"test\",\n    \"remarks\": \"\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://54.189.84.90:8000/createEWallet",
+					"protocol": "http",
+					"host": [
+						"54",
+						"189",
+						"84",
+						"90"
+					],
+					"port": "8000",
+					"path": [
+						"createEWallet"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "rechargeEWwallet",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"wallet_id\": \"wallet1\",\n    \"amount\": \"11\",\n    \"remarks\": \"recharge wallet with 11\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://54.189.84.90:8000/rechargeEWallet",
+					"protocol": "http",
+					"host": [
+						"54",
+						"189",
+						"84",
+						"90"
+					],
+					"port": "8000",
+					"path": [
+						"rechargeEWallet"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "transferBtwEWallets",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"wallet_id1\": \"wallet1\",\n    \"wallet_id2\": \"wallet2\",\n    \"amount\": \"1.1\",\n    \"master_id\": \"txmasterid1\",\n    \"child_id\": \"txchildid1\",\n    \"remarks\": \"\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://54.189.84.90:8000/transferBtwEWallets",
+					"protocol": "http",
+					"host": [
+						"54",
+						"189",
+						"84",
+						"90"
+					],
+					"port": "8000",
+					"path": [
+						"transferBtwEWallets"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "disburseEWallet",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"wallet_id\" : \"wallet3\", \"amount\": \"10.9\", \"remarks\":\"electricity bill\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://54.189.84.90:8000/disburseEWallet",
+					"protocol": "http",
+					"host": [
+						"54",
+						"189",
+						"84",
+						"90"
+					],
+					"port": "8000",
+					"path": [
+						"disburseEWallet"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getEWalletStatement",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"wallet_id\": \"wallet1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://54.189.84.90:8000/getEWalletStatement",
+					"protocol": "http",
+					"host": [
+						"54",
+						"189",
+						"84",
+						"90"
+					],
+					"port": "8000",
+					"path": [
+						"getEWalletStatement"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "showEWalletBalance",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"wallet_id\": \"wallet1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://54.189.84.90:8000/showEWalletBalance",
+					"protocol": "http",
+					"host": [
+						"54",
+						"189",
+						"84",
+						"90"
+					],
+					"port": "8000",
+					"path": [
+						"showEWalletBalance"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_transaction_count",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"wallet_id\": \"wallet1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://54.189.84.90:8000/getEWalletTransactionCount",
+					"protocol": "http",
+					"host": [
+						"54",
+						"189",
+						"84",
+						"90"
+					],
+					"port": "8000",
+					"path": [
+						"getEWalletTransactionCount"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_chilid_ids",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"master_id\":\"txmasterid1\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://54.189.84.90:8000/getChildIds",
+					"protocol": "http",
+					"host": [
+						"54",
+						"189",
+						"84",
+						"90"
+					],
+					"port": "8000",
+					"path": [
+						"getChildIds"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
